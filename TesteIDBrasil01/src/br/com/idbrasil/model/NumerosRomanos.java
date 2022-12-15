@@ -14,11 +14,11 @@ public class NumerosRomanos {
 	 */	 
 	
 	
-	private Integer I; //Menor							 
+	private Integer I; 							 
 	private Integer V; //Maior
-	private Integer X; //Menor 
+	private Integer X;  
 	private Integer L; //Maior
-	private Integer C; //Menor
+	private Integer C; 
 	private Integer D; //Maior
 	private Integer M; //Maior
 	
