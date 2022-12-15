@@ -8,7 +8,7 @@ import br.com.idbrasil.model.NumerosRomanos;
 
 public class RealizarCalculo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		NumerosRomanos numeroRomano = new NumerosRomanos();
 		ArrayList<Integer> lista = new ArrayList<>();
@@ -17,17 +17,7 @@ public class RealizarCalculo {
 		lista.add(numeroRomano.getI());
 		lista.add(numeroRomano.getI());
 		Soma rs = new Soma(lista);
-		
-		try {
-			rs.realizarSoma();
-		} catch (NumeroMaiorNaoSoma e) {
-			e.printStackTrace();
-		}
-		
-		
-		
-		
-		
+		System.out.println(rs.realizarSoma());
 		
 	}
 }

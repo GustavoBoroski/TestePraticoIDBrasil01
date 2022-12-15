@@ -21,20 +21,15 @@ public class Soma {
 		this.listaDeNumeros = listaDeNumeros;
 	}
 	
-	public Integer realizarSoma() throws NumeroMaiorNaoSoma {
+	public Integer realizarSoma() throws Exception {
 		NumerosRomanos nr = new NumerosRomanos();
 		Integer somatoria = 0;
 		for (int i = 0; i < listaDeNumeros.size(); i++) {
-			try {
-				if (nr.getV() == listaDeNumeros.get(i) || nr.getL() == listaDeNumeros.get(i) || nr.getD() == listaDeNumeros.get(i) || nr.getM() == listaDeNumeros.get(i)) {
-					return ;
-				} else {
-					somatoria += listaDeNumeros.get(i);
-				}
-			} catch (Exception e) {
-				// TODO: handle exception
+			if (nr.getV() == listaDeNumeros.get(i) || nr.getL() == listaDeNumeros.get(i) || nr.getD() == listaDeNumeros.get(i) || nr.getM() == listaDeNumeros.get(i)) {
+				throw new Exception("Numeros adicionados não foram aceitos!");
+			} else {
+				somatoria += listaDeNumeros.get(i);
 			}
-
 		}
 		return somatoria;
 	}
