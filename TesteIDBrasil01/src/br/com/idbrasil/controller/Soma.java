@@ -2,7 +2,6 @@ package br.com.idbrasil.controller;
 
 import java.util.ArrayList;
 
-import br.com.idbrasil.exception.NumeroMaiorNaoSoma;
 import br.com.idbrasil.model.NumerosRomanos;
 
 public class Soma {
@@ -26,7 +25,7 @@ public class Soma {
 		Integer somatoria = 0;
 		for (int i = 0; i < listaDeNumeros.size(); i++) {
 			if (nr.getV() == listaDeNumeros.get(i) || nr.getL() == listaDeNumeros.get(i) || nr.getD() == listaDeNumeros.get(i) || nr.getM() == listaDeNumeros.get(i)) {
-				throw new Exception("Numeros adicionados não foram aceitos!");
+				throw new Exception("Numeros adicionados nÃ£o foram aceitos!");
 			} else {
 				somatoria += listaDeNumeros.get(i);
 			}
