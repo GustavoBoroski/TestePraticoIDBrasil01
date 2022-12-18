@@ -2,7 +2,7 @@ package br.com.idbrasil.main;
 
 import java.util.ArrayList;
 
-import br.com.idbrasil.controller.Soma;
+import br.com.idbrasil.controller.QualOperacao;
 import br.com.idbrasil.exception.NumeroMaiorNaoSoma;
 import br.com.idbrasil.model.NumerosRomanos;
 
@@ -12,12 +12,10 @@ public class RealizarCalculo {
 
 		NumerosRomanos numeroRomano = new NumerosRomanos();
 		ArrayList<Integer> lista = new ArrayList<>();
+		lista.add(numeroRomano.getX());
 		lista.add(numeroRomano.getV());
-		lista.add(numeroRomano.getI());
-		lista.add(numeroRomano.getI());
-		lista.add(numeroRomano.getI());
-		Soma rs = new Soma(lista);
-		System.out.println(rs.realizarSoma());
+		QualOperacao qo = new QualOperacao(lista);
+		System.out.println(qo.realizarSoma());
 		
 	}
 }
